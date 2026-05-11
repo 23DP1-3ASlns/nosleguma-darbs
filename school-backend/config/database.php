@@ -53,17 +53,19 @@ return [
             'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'flags' => MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT,
-            'charset' => env('DB_CHARSET', 'utf8mb4'),
-            'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
-            'prefix' => '',
-            'prefix_indexes' => true,
-            'strict' => true,
-            'engine' => null,
-            'options' => [
+            'charset' => 'utf8mb4',
+'collation' => 'utf8mb4_unicode_ci',
+'prefix' => '',
+'prefix_indexes' => true,
+'strict' => true,
+'engine' => null,
+'options' => array_filter([
     PDO::MYSQL_ATTR_SSL_CA => null,
     PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
-    PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci",
-],
+    PDO::MYSQL_ATTR_SSL_KEY => null,
+    PDO::MYSQL_ATTR_SSL_CERT => null,
+    PDO::MYSQL_ATTR_SSL_CIPHER => null,
+]),
         ],
 
         'mariadb' => [
