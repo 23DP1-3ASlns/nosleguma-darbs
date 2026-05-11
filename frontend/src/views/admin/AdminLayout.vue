@@ -181,7 +181,7 @@ async function handleLogout() {
   overflow: hidden;
 }
 .nav-item:hover { background: var(--clr-surface2); color: var(--clr-text); }
-.nav-item.router-link-active { background: var(--clr-accent-pale); color: var(--clr-accent); font-weight: 600; }
+.nav-item.router-link-exact-active {background: var(--clr-accent-pale); color: var(--clr-accent); font-weight: 600;}
 
 .nav-icon { font-size: 1.1rem; flex-shrink: 0; }
 .collapsed .nav-text { display: none; }

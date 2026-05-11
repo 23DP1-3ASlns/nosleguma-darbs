@@ -206,7 +206,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 }
 
 .nav-links > a:hover::before,
-.nav-links > a.router-link-active::before {
+.nav-links > a.router-link-exact-active::before {
   transform: scaleX(1);
 }
 
