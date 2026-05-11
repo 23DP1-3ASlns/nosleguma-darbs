@@ -5,7 +5,7 @@ import router from './router'
 import axios from 'axios'
 
 // Configure axios
-axios.defaults.baseURL = '/api'
+axios.defaults.baseURL = import.meta.env.VITE_API_URL + '/api'
 axios.defaults.headers.common['Accept'] = 'application/json'
 axios.defaults.withCredentials = false
 
