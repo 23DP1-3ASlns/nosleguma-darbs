@@ -41,9 +41,6 @@
         </nav>
 
         <div class="nav-actions">
-          <button class="dark-toggle desktop-only" @click="toggleDark">
-            {{ isDark ? '☀️' : '🌙' }}
-          </button>
           <button class="hamburger" @click="menuOpen = !menuOpen" :class="{ active: menuOpen }">
             <span></span><span></span><span></span>
           </button>
