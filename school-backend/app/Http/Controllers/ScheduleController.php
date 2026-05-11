@@ -16,7 +16,7 @@ class ScheduleController extends Controller
             $query->where('group_name', $request->group);
         }
 
-        $schedule = $query->orderByRaw("FIELD(day_of_week, 'Pirmdiena', 'Otrdiena', 'Trešdiena', 'Ceturtdiena', 'Piektdiena')")
+        $schedule = $query->orderByRaw("CASE day_of_week WHEN 'Pirmdiena' THEN 1 WHEN 'Otrdiena' THEN 2 WHEN 'Trešdiena' THEN 3 WHEN 'Ceturtdiena' THEN 4 WHEN 'Piektdiena' THEN 5 END")
                           ->orderBy('start_time')
                           ->get();
 

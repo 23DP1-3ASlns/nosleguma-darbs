@@ -13,7 +13,7 @@ return new class extends Migration
             $table->string('group_name');
             $table->string('subject');
             $table->string('teacher');
-            $table->enum('day_of_week', ['Pirmdiena', 'Otrdiena', 'Trešdiena', 'Ceturtdiena', 'Piektdiena']);
+            $table->string('day_of_week');
             $table->time('start_time');
             $table->time('end_time');
             $table->timestamps();
